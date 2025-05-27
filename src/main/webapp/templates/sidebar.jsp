@@ -6,11 +6,11 @@
         </li>
         <li class="flex items-center space-x-3 py-2 text-gray-300 hover:text-white cursor-pointer">
             <img src="${pageContext.request.contextPath}/resources/people.png" alt="Clientes" class="w-6 h-6">
-            <a href="clientes.jsp">Clientes</a>
+            <a href="clientes">Clientes</a>
         </li>
         <li class="flex items-center space-x-3 py-2 text-gray-300 hover:text-white cursor-pointer">
             <img src="${pageContext.request.contextPath}/resources/people.png" alt="Clientes" class="w-6 h-6">
-            <a href="empleados.jsp">Empleados</a>
+            <a href="empleados">Empleados</a>
         </li>
         <li class="flex items-center space-x-3 py-2 text-gray-300 hover:text-white cursor-pointer">
             <img src="${pageContext.request.contextPath}/resources/Vector.png" alt="Clientes" class="w-6 h-6">

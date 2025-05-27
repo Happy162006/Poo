@@ -37,6 +37,9 @@ public class EmpleadoServlet extends HttpServlet {
                     case "cambiarEstado":
                         cambiarEstadoEmpleado(request, response);
                         break;
+                    case "eliminar":
+                        eliminarEmpleado(request, response);
+                        break;
                     default:
                         listarEmpleados(request, response);
                 }
@@ -114,6 +117,16 @@ public class EmpleadoServlet extends HttpServlet {
         empleadoDAO.cambiarEstado(dui, activar);
         response.sendRedirect("empleados");
     }
+
+    private void eliminarEmpleado(HttpServletRequest request, HttpServletResponse response)
+            throws SQLException, IOException {
+        String dui = request.getParameter("dui");
+        if (dui != null) {
+            empleadoDAO.eliminar(dui);
+        }
+        response.sendRedirect("empleados?accion=listar");
+    }
+
 
     private void manejarError(HttpServletRequest request, HttpServletResponse response, String mensaje)
             throws ServletException, IOException {

@@ -81,6 +81,16 @@ public class EmpleadoDAO {
         }
     }
 
+    public void eliminar(String dui) throws SQLException {
+        String sql = "DELETE FROM empleados WHERE dui = ?";
+        try (Connection conn = Conexion.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, dui);
+            pstmt.executeUpdate();
+        }
+    }
+
+
     private Empleado mapearEmpleado(ResultSet rs) throws SQLException {
         return new Empleado(rs.getString("dui"), rs.getString("nombre"), rs.getString("telefono"), rs.getString("tipo_persona"), rs.getString("correo"), rs.getString("direccion"), "Activo".equals(rs.getString("estado")), rs.getString("creado_por"), rs.getDate("fecha_creacion"), rs.getDate("fecha_actualizacion"), rs.getDate("fecha_inactivacion"), rs.getString("tipo_contratacion"));
     }

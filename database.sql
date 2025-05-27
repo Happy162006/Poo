@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS  empleados
 CREATE TABLE  IF NOT EXISTS  cotizaciones
 (
     id             INT AUTO_INCREMENT PRIMARY KEY,
-    cliente_id     INT NOT NULL,
+    cliente_dui     char(10) NOT NULL,
     fecha_creacion DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (cliente_id) REFERENCES clientes (id)
 );

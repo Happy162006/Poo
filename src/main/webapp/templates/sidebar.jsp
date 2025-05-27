@@ -14,7 +14,7 @@
         </li>
         <li class="flex items-center space-x-3 py-2 text-gray-300 hover:text-white cursor-pointer">
             <img src="${pageContext.request.contextPath}/resources/Vector.png" alt="Clientes" class="w-6 h-6">
-            <a href="cotizacion.jsp">Cotización</a>
+            <a href="cotizaciones.jsp">Cotización</a>
         </li>
         <li class="flex items-center space-x-3 py-2 text-gray-300 hover:text-white cursor-pointer">
             <img src="${pageContext.request.contextPath}/resources/Group%206.png" alt="Clientes" class="w-6 h-6">
